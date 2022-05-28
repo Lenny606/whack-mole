@@ -11,10 +11,8 @@ const timeUp = false;
 //creates random interval between min - max sec
 const randomTime = (min, max) => {
     let time = Math.ceil(Math.random() * (max-min) + 1)
-    console.log(time);
+    return time;
 }
-
-// randomTime(1,10)
 
 ////////-------  creates random number and passes to array holes
 const randomHole = (holes) => {
@@ -24,10 +22,14 @@ const randomHole = (holes) => {
    
 }
 
-console.log(randomHole(holes));
+///------------ccs fot pop up efect on the mole + js setTimout
+holes[0].classList = "hole active"
 
+const timer = setTimeout(() => {
 
+    holes[0].classList = "hole";
 
+}, 2000 );
 
 
 
