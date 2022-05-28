@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const btn = document.querySelector(".btn")
 const holes = document.querySelectorAll(".hole");
 const moles = document.querySelectorAll(".mole");
-const score = 0;
+let score = 0;
 const timeUp = false;
 
 //creates random interval between min - max sec
@@ -22,11 +22,6 @@ const randomHole = (holes) => {
    
 }
 
-///------------ccs fot pop up efect on the mole + js setTimout
-
-
-
-
 //peep function -------------------------
 
 const peep = (min, max, hole) => {
@@ -38,8 +33,30 @@ const peep = (min, max, hole) => {
         target.classList = "hole";
     
     }, interval );
-
+    return target
 }
 
 peep(1,2,holes)
+//-------------whack / hide function sets the score
+
+const whack = () => {
+
+    let newScore = score++;
+    const scoreTarget = document.querySelector(".score")
+    scoreTarget.innerHTML = "SCORE: "  + newScore
+}
+
+// const hide = (e) => {
+
+//     e.target.classList = "hole"
+    
+    
+// }
+
+
+
+whack()
+// hide()
+
+
 });
