@@ -16,9 +16,15 @@ const randomTime = (min, max) => {
 
 // randomTime(1,10)
 
+////////-------  creates random number and passes to array holes
+const randomHole = (holes) => {
+    let num = Math.floor(Math.random() * 6)
+    let target = holes[num]
+    return target
+   
+}
 
-
-
+console.log(randomHole(holes));
 
 
 
